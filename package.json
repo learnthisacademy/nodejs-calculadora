@@ -1,8 +1,8 @@
 {
-    "name": "node-template",
+    "name": "nodejs-calculadora",
     "version": "1.0.0",
     "type": "module",
-    "description": "Plantilla base para los proyectos desarrollados en el curso de Node.JS de la plataforma LearnThis Academy",
+    "description": "Primera práctica del curso de Node.JS en LearnThis Academy",
     "scripts": {
         "dev": "nodemon src/index.js",
         "start": "node src/index.js",
