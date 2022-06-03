@@ -29,7 +29,13 @@
         "prettier": "2.6.2"
     },
     "imports": {
-        "#Lib/*": "./src/lib/*.js"
+        "#Lib/*": "./src/lib/*.js",
+        "#Constants/*": [
+            "./src/constants/*.js"
+        ],
+        "#Errors/*": [
+            "./src/errors/*.js"
+        ]
     },
     "lint-staged": {
         "*.js": "eslint --fix",
