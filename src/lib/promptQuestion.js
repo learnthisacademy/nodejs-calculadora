@@ -9,3 +9,5 @@ const consoleInterface = readline.createInterface({
 export const promptQuestion = promisify(consoleInterface.question).bind(
     consoleInterface
 );
+
+export const closeInterface = () => consoleInterface.close();
