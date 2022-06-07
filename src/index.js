@@ -1,3 +1,4 @@
+import { operations } from '#Constants/operations';
 import { BINARY_OPERATORS } from '#Constants/operators';
 import { InvalidInputError } from '#Errors/invalidInputError';
 import { getBinaryOperatings, getSingleOperating } from '#Lib/getOperatings';
@@ -20,19 +21,22 @@ import { promptQuestion } from '#Lib/promptQuestion';
 
         const splittedInput = standarizeInput.split(operator);
 
-        if (BINARY_OPERATORS.includes(operator)) {
-            const { firstOperating, secondOperating } =
+        let firstOperating, secondOperating;
+
+        if (BINARY_OPERATORS.includes(operator))
+            [firstOperating, secondOperating] =
                 getBinaryOperatings(splittedInput);
-
-            console.log(firstOperating, operator, secondOperating);
-        } else {
-            const { firstOperating } = getSingleOperating(splittedInput);
-
-            console.log(operator, firstOperating);
-        }
+        else [firstOperating] = getSingleOperating(splittedInput);
 
         // 3º Realizar la operación
+        const result = operations[operator](firstOperating, secondOperating);
+
+        const roundedResult = Number(Math.round(result + 'e+5') + 'e-5');
+
         // 4º Mostrar resultado por consola
+        if (isNaN(roundedResult) || !isFinite(roundedResult))
+            console.log('OPERACIÓN NO VÁLIDA');
+        else console.log(`El resultado es: ${roundedResult}`);
     } catch (error) {
         if (error instanceof InvalidInputError) console.log(error.message);
         else

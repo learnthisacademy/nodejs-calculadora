@@ -15,7 +15,7 @@ export const getBinaryOperatings = ([leftSide, rightSide]) => {
     if (isNaN(secondOperating) || !isFinite(secondOperating))
         throw new InvalidInputError();
 
-    return { firstOperating, secondOperating };
+    return [firstOperating, secondOperating];
 };
 
 export const getSingleOperating = ([leftSide, rightSide]) => {
@@ -35,5 +35,5 @@ export const getSingleOperating = ([leftSide, rightSide]) => {
     if (isNaN(firstOperating) || !isFinite(firstOperating))
         throw new InvalidInputError();
 
-    return { firstOperating };
+    return [firstOperating];
 };
