@@ -1,7 +1,7 @@
-import { operations } from '#Constants/operations';
-import { InvalidInputError } from '#Errors/invalidInputError';
-import { extractByRegex } from '#Lib/extractByRegex';
-import { promptQuestion } from '#Lib/promptQuestion';
+import { operations } from '#Constants/operations.js';
+import { InvalidInputError } from '#Errors/invalidInputError.js';
+import { extractByRegex } from '#Lib/extractByRegex.js';
+import { promptQuestion } from '#Lib/promptQuestion.js';
 
 export const bootstrap = async () => {
     try {

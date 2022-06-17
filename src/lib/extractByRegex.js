@@ -1,5 +1,5 @@
-import { BINARY_REGEX, SINGLE_REGEX } from '#Constants/regex';
-import { InvalidInputError } from '#Errors/invalidInputError';
+import { BINARY_REGEX, SINGLE_REGEX } from '#Constants/regex.js';
+import { InvalidInputError } from '#Errors/invalidInputError.js';
 
 export const extractByRegex = (standarizeInput) => {
     const binaryResult = BINARY_REGEX.exec(standarizeInput)?.slice(1);
