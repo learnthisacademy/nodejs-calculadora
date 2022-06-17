@@ -1,5 +1,5 @@
-import { ALL_OPERATORS } from '#Constants/operators';
-import { InvalidInputError } from '#Errors/invalidInputError';
+import { ALL_OPERATORS } from '#Constants/operators.js';
+import { InvalidInputError } from '#Errors/invalidInputError.js';
 
 export const getOperator = (standarizeInput) => {
     let operator;

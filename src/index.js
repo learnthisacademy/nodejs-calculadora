@@ -1,4 +1,4 @@
-import { closeInterface } from '#Lib/promptQuestion';
+import { closeInterface } from '#Lib/promptQuestion.js';
 import { bootstrap } from './bootstrap.js';
 
 const main = async () => {

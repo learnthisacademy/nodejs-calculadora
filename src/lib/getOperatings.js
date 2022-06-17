@@ -1,4 +1,4 @@
-import { InvalidInputError } from '#Errors/invalidInputError';
+import { InvalidInputError } from '#Errors/invalidInputError.js';
 
 export const getBinaryOperatings = ([leftSide, rightSide]) => {
     // Comprobamos que la parte izquierda y derecha del operador

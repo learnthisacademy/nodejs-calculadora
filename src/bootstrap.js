@@ -1,9 +1,9 @@
-import { operations } from '#Constants/operations';
-import { BINARY_OPERATORS } from '#Constants/operators';
-import { InvalidInputError } from '#Errors/invalidInputError';
-import { getBinaryOperatings, getSingleOperating } from '#Lib/getOperatings';
-import { getOperator } from '#Lib/getOperator';
-import { promptQuestion } from '#Lib/promptQuestion';
+import { operations } from '#Constants/operations.js';
+import { BINARY_OPERATORS } from '#Constants/operators.js';
+import { InvalidInputError } from '#Errors/invalidInputError.js';
+import { getBinaryOperatings, getSingleOperating } from '#Lib/getOperatings.js';
+import { getOperator } from '#Lib/getOperator.js';
+import { promptQuestion } from '#Lib/promptQuestion.js';
 
 export const bootstrap = async () => {
     try {
