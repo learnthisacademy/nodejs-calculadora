@@ -35,5 +35,7 @@ export const getSingleOperating = ([leftSide, rightSide]) => {
     if (isNaN(firstOperating) || !isFinite(firstOperating))
         throw new InvalidInputError();
 
+    if (!firstOperating) throw new InvalidInputError();
+
     return [firstOperating];
 };
