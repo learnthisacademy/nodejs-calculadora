@@ -30,12 +30,14 @@ export const getSingleOperating = ([leftSide, rightSide]) => {
     // Extraemos el contenido de los paréntesis y validamos
     // que sea un número válido
     let firstOperating = rightSide.slice(1, -1);
+
+    // Comprobamos el caracter vacío ya que al convertirlo sería un 0
+    if (firstOperating === '') throw new InvalidInputError();
+    
     firstOperating = Number(firstOperating.replaceAll(',', '.'));
 
     if (isNaN(firstOperating) || !isFinite(firstOperating))
         throw new InvalidInputError();
-
-    if (!firstOperating) throw new InvalidInputError();
 
     return [firstOperating];
 };
